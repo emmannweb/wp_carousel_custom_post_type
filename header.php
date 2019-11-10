@@ -92,7 +92,8 @@
 
 						$indicator_object= new WP_Query(array(
 
-							'post_type' => 'carouselslider'
+							'post_type' => 'carouselslider',
+							'posts_per_page'=>3
 						));
 
 						$indicator_var= -1;
@@ -119,7 +120,8 @@
 
 						$carouselvar = new WP_query(array(
 
-							'post_type'  => 'carouselslider'
+							'post_type'  => 'carouselslider',
+							'posts_per_page'=>3
 						));
 
 						$carva=0;
@@ -136,10 +138,10 @@
 								<?php }
 								?>
 
-								<img class="d-block w-100" src="<?php the_post_thumbnail();?>"
+								<img class="d-block w-100" src="<?php the_post_thumbnail_url();?>"
 									<div class="carousel-caption d-none d-md-block">
 									 <h1 class="animated bounceInUp"><?php the_title();?></h1>
-									 <p ><?php the_content()?></p>
+									 <p ><?php the_excerpt()?></p>
 								 </div>
 							</div>
 
